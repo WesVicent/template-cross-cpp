@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 27,
+    "patch": 7
+  },
+  "configurePresets": [
+    {
+      "name": "WinVS",
+      "generator": "Visual Studio 16 2019",
+      "description": "A Visual Studio solution build",
+      "hidden": false,
+	  "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+	{
+	  "name": "MinGW",
+      "generator": "MinGW Makefiles",
+      "description": "A default MinGW build",
+      "hidden": false,
+	  "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+		}
+	}
+  ]
+}
